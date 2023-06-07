@@ -1,6 +1,8 @@
 // `` crase
 
 var lista = [];
+var pontosPlayer = [];
+var pontosPC = [];
 
 function pedra(){
     var escolhaPlayer = document.getElementById("player");
@@ -27,6 +29,8 @@ function jogar(){
     var escolhaPC = document.getElementById("pc");
     var resultado = document.getElementById("resultado");
     var ppt = ["PEDRA", "PAPEL", "TESOURA"];
+    var placarPlayer = document.getElementById("placarPlayer");
+    var placarPC = document.getElementById("placarPC");
 
     var numeroAleatorio = Math.floor(Math.random() * ppt.length);
     escolhaPC.innerHTML = `A inteligência artificial escolheu <b>${ppt[numeroAleatorio]}</b>.`;
@@ -36,29 +40,44 @@ function jogar(){
     }
     else if(lista[lista.length - 1] == "PEDRA" && ppt[numeroAleatorio] == "PAPEL"){
         resultado.innerHTML = `Você perdeu!`;
+        pontosPC.push("Perdeu");
+        placarPC.innerHTML = pontosPC.length;
     }
     else if(lista[lista.length - 1] == "PEDRA" && ppt[numeroAleatorio] == "TESOURA"){
         resultado.innerHTML = `Você ganhou!`;
+        pontosPlayer.push("Ganhou");
+        placarPlayer.innerHTML = pontosPlayer.length;
     }
     else if(lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "PAPEL"){
         resultado.innerHTML = `Empate!`;
     }
     else if(lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "TESOURA"){
         resultado.innerHTML = `Você perdeu!`;
+        pontosPC.push("Perdeu");
+        placarPC.innerHTML = pontosPC.length;
     }
     else if(lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "PEDRA"){
         resultado.innerHTML = `Você ganhou!`;
+        pontosPlayer.push("Ganhou");
+        placarPlayer.innerHTML = pontosPlayer.length;
     }
     else if(lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "TESOURA"){
         resultado.innerHTML = `Empate!`;
     }
     else if(lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "PEDRA"){
         resultado.innerHTML = `Você perdeu!`;
+        pontosPC.push("Perdeu");
+        placarPC.innerHTML = pontosPC.length;
     }
     else if(lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "PAPEL"){
         resultado.innerHTML = `Você ganhou!`;
+        pontosPlayer.push("Ganhou");
+        placarPlayer.innerHTML = pontosPlayer.length;
     }
-    else{ resultado.innerHTML = `Escolha uma opção por favor.`}
+    else{ 
+        escolhaPC.innerHTML = "";    
+        resultado.innerHTML = `Escolha uma opção por favor.`
+    }
 
     
     console.log(ppt[numeroAleatorio]);
