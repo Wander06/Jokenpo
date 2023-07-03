@@ -79,14 +79,21 @@ p{
 
 @media screen and (max-width:634px) {
     h1{
-        font-size: 55px;
-        -webkit-text-stroke-width: 1px;
+        font-size: 50px;
+        -webkit-text-stroke-width: 0px;
     }
     p{
         font-size:25px;
     }
     .botoes{
         font-size: 13px;
+    }
+    #divPai{
+        flex-wrap: wrap-reverse;
+    }
+    #div2{
+        height: 340px;
+        border-bottom:1px white solid ;
     }
 
 }
