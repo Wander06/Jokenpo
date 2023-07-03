@@ -109,4 +109,5 @@ function reiniciar() {
     placarPC.innerHTML = 0;
     pontosPC = [];
     pontosPlayer = [];
+    lista = [];
 }
