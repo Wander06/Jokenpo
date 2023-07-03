@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,30 @@
     <script src="index.js"></script>
     <title>Jokenpo</title>
 </head>
+
 <body>
-    <section>
-        <h1>Jokenpo</h1>
-        <div>
-            <button onclick="pedra()" class="botoes">Pedra</button>
-            <button onclick="papel()" class="botoes">Papel</button>
-            <button onclick="tesoura()" class="botoes">Tesoura</button>
-            <button onclick="jogar()" class="botoes">Jogar</button>
-            <button onclick="reiniciar()" class="botoes">Reiniciar jogo</button>
-            <p id="player"></p>
-            <p id="pc"></p>
-            <p id="resultado"></p>
+    <main>
+        <div id="divPai">
+            <div id="div1">
+                <h1>Placar</h1>
+                <p>Você:</p>
+                <div id="placarPlayer">0</div>
+                <p>Computador:</p>
+                <div id="placarPC">0</div>
+            </div>
+            <div id="div2">
+                <h1>Jokenpo</h1>
+                <button onclick="pedra()" class="botoes">Pedra</button>
+                <button onclick="papel()" class="botoes">Papel</button>
+                <button onclick="tesoura()" class="botoes">Tesoura</button>
+                <button onclick="jogar()" class="botoes">Jogar</button>
+                <button onclick="reiniciar()" class="botoes">Reiniciar jogo</button>
+                <p id="player"></p>
+                <p id="pc"></p>
+                <p id="resultado"></p>
+            </div>
         </div>
-        <hr>
-        <div>
-            <h1>Placar</h1>
-            <p>Você:</p>
-            <div id="placarPlayer">0</div>
-            <p>Computador:</p>
-            <div id="placarPC">0</div>
-        </div>
-    </section>
+    </main>
 </body>
+
 </html>
