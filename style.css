@@ -80,6 +80,7 @@ p{
 @media screen and (max-width:634px) {
     h1{
         font-size: 55px;
+        -webkit-text-stroke-width: 1px;
     }
     p{
         font-size:25px;
@@ -87,4 +88,5 @@ p{
     .botoes{
         font-size: 13px;
     }
+
 }

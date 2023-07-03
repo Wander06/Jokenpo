@@ -53,42 +53,51 @@ function jogar() {
     if (lista[lista.length - 1] == "PEDRA" && ppt[numeroAleatorio] == "PEDRA") {
         resultado.innerHTML = `Empate!`;
     }
+
     else if (lista[lista.length - 1] == "PEDRA" && ppt[numeroAleatorio] == "PAPEL") {
         resultado.innerHTML = `Você perdeu!`;
         pontosPC.push("Perdeu");
         placarPC.innerHTML = pontosPC.length;
     }
+
     else if (lista[lista.length - 1] == "PEDRA" && ppt[numeroAleatorio] == "TESOURA") {
         resultado.innerHTML = `Você ganhou!`;
         pontosPlayer.push("Ganhou");
         placarPlayer.innerHTML = pontosPlayer.length;
     }
+
     else if (lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "PAPEL") {
         resultado.innerHTML = `Empate!`;
     }
+
     else if (lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "TESOURA") {
         resultado.innerHTML = `Você perdeu!`;
         pontosPC.push("Perdeu");
         placarPC.innerHTML = pontosPC.length;
     }
+
     else if (lista[lista.length - 1] == "PAPEL" && ppt[numeroAleatorio] == "PEDRA") {
         resultado.innerHTML = `Você ganhou!`;
         pontosPlayer.push("Ganhou");
         placarPlayer.innerHTML = pontosPlayer.length;
     }
+
     else if (lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "TESOURA") {
         resultado.innerHTML = `Empate!`;
     }
+
     else if (lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "PEDRA") {
         resultado.innerHTML = `Você perdeu!`;
         pontosPC.push("Perdeu");
         placarPC.innerHTML = pontosPC.length;
     }
+
     else if (lista[lista.length - 1] == "TESOURA" && ppt[numeroAleatorio] == "PAPEL") {
         resultado.innerHTML = `Você ganhou!`;
         pontosPlayer.push("Ganhou");
         placarPlayer.innerHTML = pontosPlayer.length;
     }
+
     else {
         escolhaPC.innerHTML = "";
         resultado.innerHTML = `Escolha uma opção por favor.`;
